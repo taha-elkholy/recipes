@@ -12,20 +12,23 @@ class AppTheme {
         scaffoldBackgroundColor: AppColors.white,
         fontFamily: 'Inter',
         appBarTheme: AppBarTheme(
-            elevation: 0,
-            color: AppColors.transparent,
-            systemOverlayStyle: SystemUiOverlayStyle(
-              statusBarColor: AppColors.transparent,
-              statusBarBrightness: Brightness.dark,
-              statusBarIconBrightness: Brightness.dark,
-            ),
-            iconTheme: IconThemeData(color: AppColors.black)),
+          elevation: 0,
+          color: AppColors.transparent,
+          systemOverlayStyle: SystemUiOverlayStyle(
+            statusBarColor: AppColors.transparent,
+            statusBarBrightness: Brightness.dark,
+            statusBarIconBrightness: Brightness.dark,
+          ),
+          iconTheme: IconThemeData(color: AppColors.black),
+        ),
         inputDecorationTheme: InputDecorationTheme(
+          prefixIconColor: AppColors.grey,
           hintStyle: TextStyle(
             color: AppColors.grey,
             fontSize: 14.sp,
-            fontWeight: FontWeight.w600,
+            fontWeight: FontWeight.w400,
           ),
+          contentPadding: EdgeInsets.all(8.w),
           border: _drawBorder(),
           focusedBorder: _drawBorder(),
           enabledBorder: _drawBorder(),
@@ -34,6 +37,15 @@ class AppTheme {
           focusedErrorBorder: _drawBorder(color: Colors.red),
         ),
         textTheme: TextTheme(
+          titleLarge: TextStyle(
+            color: AppColors.titleColor,
+            fontSize: 22.sp,
+            fontWeight: FontWeight.w600,
+          ),titleMedium: TextStyle(
+            color: AppColors.titleColor,
+            fontSize: 20.sp,
+            fontWeight: FontWeight.w600,
+          ),
           bodyMedium: TextStyle(
             color: AppColors.black,
             fontSize: 16.sp,
@@ -80,9 +92,9 @@ class AppTheme {
     Color? color,
   }) =>
       OutlineInputBorder(
-        borderRadius: BorderRadius.circular(5.r),
+        borderRadius: BorderRadius.circular(10.r),
         borderSide: BorderSide(
-          color: color ?? AppColors.grey,
+          color: color ?? AppColors.lightGrey,
         ),
       );
 }

@@ -5,11 +5,15 @@ class AppStrings {
   static const String appName = 'Recipes';
   static const String noRouteFound = 'No Route Found';
 
-  /// OnBoarding page
+  /// OnBoarding Page
   static const String premiumRecipes = '60k+ Premium recipes';
   static const String letsCooking = 'Let’s\nCooking';
   static const String findBestRecipes = 'Find best recipes for cooking';
   static const String startCooking = 'Start cooking';
+
+  /// Home Page
+  static const String findBestRecipesTitle = 'Find best recipes\nfor cooking';
+  static const String searchHint = 'Search recipes';
 
   /// shared preferences
   static const String tokenKey = 'TOKEN_KEY';
